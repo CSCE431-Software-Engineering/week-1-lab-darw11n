@@ -1,0 +1,33 @@
+<%= link_to('Back to Homepage', {controller: 'main', action: 'index'}) %>
+
+<div class="book new">
+  <h2>Create Book</h2>
+
+  <%= form_for(@book) do |f| %>
+    <% # url: tasks_path, method: 'post' %>
+
+    <table summary="Book form fields">
+      <tr>
+        <th>Title</th>
+        <td><%= f.text_field(:title) %></td>
+      </tr>
+      <tr>
+        <th>Date</th>
+        <td><%= f.text_field(:publishedDate) %></td>
+      </tr>
+      <tr>
+        <th>price</th>
+        <td><%= f.text_field(:price) %></td>
+      </tr>
+      <tr>
+        <th>Author</th>
+        <td><%= f.text_area(:author) %></td>
+      </tr>
+    </table>
+
+    <div class="form-buttons">
+      <%= f.submit("Create Book") %>
+    </div>
+
+  <% end %>
+</div>
