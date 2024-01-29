@@ -1,0 +1,44 @@
+<%= link_to('Back to Homepage', {controller: 'main', action: 'index'}) %><br />
+
+<div class="book show">
+  <h2>Show book</h2>
+
+  <div class="actions">
+    <%= link_to('Edit', edit_book_path(@book)) %>
+    <%= link_to('Delete', delete_book_path(@book)) %>
+  </div>
+
+  <table summary="Book detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= @book.title %></td>
+    </tr>
+    <tr>
+      <th>Position</th>
+      <td><%= @book.id %></td>
+    </tr>
+    <tr>
+      <th>Price</th>
+      <td><%= @book.price %></td>
+    </tr>
+    <tr>
+      <th>Author</th>
+      <td><%= @book.author %></td>
+    </tr>
+    <tr>
+      <th>publishedDate</th>
+      <td>
+        <td><%= @book.publishedDate %></td>
+      </td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @book.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @book.updated_at %></td>
+    </tr>
+  </table>
+
+</div>
