@@ -33,17 +33,24 @@ jobs:
           bundler install
       - name: Create database
         run: |
+          cd book_collection
           bundler exec rails db:create RAILS_ENV=test
           bundler exec rails db:migrate RAILS_ENV=test
       - uses: borales/actions-yarn@v3.0.0
         with:
           cmd: install
       - name: Run tests
-        run: bundler exec rspec .
+        run: |
+          cd book_collection
+          bundler exec rspec .
       - name: Run brakeman
-        run: brakeman -o brakeman.txt
+        run: |
+          cd book_collection
+          brakeman -o brakeman.txt
       - name: Run rubocop
-        run: bundler exec rubocop --force-exclusion vendor/*/** --out rubocop.txt
+        run: |
+          cd book_collection
+          bundler exec rubocop --force-exclusion vendor/*/** --out rubocop.txt
       - name: Upload coverage results
         uses: actions/upload-artifact@master
         if: always()
