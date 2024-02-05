@@ -9,7 +9,6 @@ Rails.application.routes.draw do
 
 
   get 'main/index'
-
   #get 'books/index'
   #get 'books/new'
   #get 'books/edit'
