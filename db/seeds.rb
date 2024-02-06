@@ -8,5 +8,8 @@
 
 Book.create!([
     {title: "Book 1", author: 'Darwin', price: 10, publishedDate: '2024-01-01'},
-    {title: "Book 2",  author: 'Darwin', price: 10, publishedDate: '2024-01-01'}
+    {title: "Book 2",  author: 'Darwin', price: 10, publishedDate: '2024-01-01'},
+    {title: "Book 3",  author: 'Darwin', price: 10, publishedDate: '2024-01-01'},
+    {title: "Book 4",  author: 'Darwin', price: 10, publishedDate: '2024-01-01'},
+    {title: "Book 5",  author: 'Darwin', price: 10, publishedDate: '2024-01-01'}
 ])
