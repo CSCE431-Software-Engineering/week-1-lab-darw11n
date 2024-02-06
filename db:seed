@@ -1,0 +1,17 @@
+/usr/local/bin/ruby -I/usr/local/bundle/gems/rspec-core-3.12.2/lib:/usr/local/bundle/gems/rspec-support-3.12.1/lib /usr/local/bundle/gems/rspec-core-3.12.2/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+
+An error occurred while loading spec_helper. - Did you mean?
+                    rspec ./spec/spec_helper.rb
+
+Failure/Error: require 'simplecov'
+
+LoadError:
+  cannot load such file -- simplecov
+# ./spec/spec_helper.rb:1:in `require'
+# ./spec/spec_helper.rb:1:in `<top (required)>'
+No examples found.
+
+
+Finished in 0.00003 seconds (files took 0.11418 seconds to load)
+0 examples, 0 failures, 1 error occurred outside of examples
+
