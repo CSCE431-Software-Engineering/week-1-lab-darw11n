@@ -7,9 +7,7 @@ Rails.application.routes.draw do
   match 'hello' , to: "main#hello", via: :get
 
 
-
   get 'main/index'
-
   #get 'books/index'
   #get 'books/new'
   #get 'books/edit'
